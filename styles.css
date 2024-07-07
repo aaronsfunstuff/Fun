@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,8 +23,21 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    margin-right: 10px;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+p {
+    margin-top: 20px;
+}
+
+#like-button {
+    background-color: #FF4500;
+}
+
+#like-button:hover {
+    background-color: #FF6347;
 }

@@ -1,10 +1,11 @@
 body {
-    font-family:sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f8ff;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
 }
 
 .container {
@@ -24,14 +25,11 @@ button {
     cursor: pointer;
     margin-top: 20px;
     margin-right: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #45a049;
-}
-
-p {
-    margin-top: 20px;
 }
 
 #like-button {
@@ -40,4 +38,52 @@ p {
 
 #like-button:hover {
     background-color: #FF6347;
+}
+
+#theme-toggle {
+    background-color: #007BFF;
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+#search {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    --background-color: #f0f8ff;
+    --text-color: #000;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #fff;
+}
+
+body, p, h1 {
+    color: var(--text-color);
+    transition: color 0.3s;
 }
